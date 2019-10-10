@@ -17,15 +17,15 @@ githublink = 'https://github.com/austinlasseter/dash-scatterplot-housing'
 ########### Prepare the dataframe
 df = pd.read_csv('DC_Properties.csv')
 df=df[df['ASSESSMENT_NBHD']==neighborhood]
-df=df[(df['PRICE']<=10000000) & (df['PRICE']>=1)]
-df=df[df['LANDAREA']<40000]
-df=df[df['PRICE']<9000000]
+df=df[(df['PRICE']<=1000000) & (df['PRICE']>=1)]
+df=df[df['LANDAREA']<4000]
+df=df[df['PRICE']<900000]
 df=df[df['BEDRM']<10]
 
 ########### Set up the chart
 trace = go.Scatter(
     x = df['PRICE'],
-    y = df['LIVING_GBA'],
+    y = df['YR_RMDL'],
     mode = 'markers',
     marker=dict(
         size=8,
