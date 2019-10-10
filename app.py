@@ -9,8 +9,8 @@ import pandas as pd
 tabtitle = 'DC Housing'
 myheading='Analysis of housing prices in Washington DC'
 neighborhood='Petworth'
-color1='#04F9E6'
-color2='#1B03B1'
+color1='#009933'
+color2='#ff0000'
 sourceurl = 'https://www.kaggle.com/christophercorrea/dc-residential-properties/'
 githublink = 'https://github.com/austinlasseter/dash-scatterplot-housing'
 
@@ -38,7 +38,7 @@ trace = go.Scatter(
 
 data = [trace]
 layout = go.Layout(
-    title = f'Larger homes cost more in {neighborhood}!', # Graph title
+    title = f'Larger homes cost only a little more in my neighborhood of {neighborhood}!', # Graph title
     xaxis = dict(title = 'Sales Price'), # x-axis label
     yaxis = dict(title = 'Square Feet'), # y-axis label
     hovermode ='closest' # handles multiple points landing on the same vertical
