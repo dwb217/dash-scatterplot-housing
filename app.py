@@ -21,6 +21,7 @@ df=df[(df['PRICE']<=1000000) & (df['PRICE']>=1)]
 df=df[df['LANDAREA']<4000]
 df=df[df['PRICE']<900000]
 df=df[df['BEDRM']<10]
+df=df[df['YR_RMDL']>=1990]
 
 ########### Set up the chart
 trace = go.Scatter(
@@ -38,7 +39,7 @@ trace = go.Scatter(
 
 data = [trace]
 layout = go.Layout(
-    title = f'FOr the most part, more recented remodeled homes only cost a little more in my neighborhood of {neighborhood}!', # Graph title
+    title = f'More recently remodeled homes only cost a little more in my neighborhood of {neighborhood}!', # Graph title
     xaxis = dict(title = 'Sales Price'), # x-axis label
     yaxis = dict(title = 'Year of last remodel'), # y-axis label
     hovermode ='closest' # handles multiple points landing on the same vertical
